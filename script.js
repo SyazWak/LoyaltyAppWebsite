@@ -7,13 +7,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -37,14 +37,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 80;
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
             });
-            
+
             // Close mobile menu if open
             navLinks.classList.remove('active');
             mobileMenuToggle.classList.remove('active');
@@ -76,7 +76,7 @@ document.querySelectorAll('.feature-card, .app-card, .benefit-item, .tech-item')
 });
 
 // ===================================
-// DYNAMIC GRADIENT ORBS
+// DYNAMIC GRADIENT ORBS (REDUCED)
 // ===================================
 
 const orbs = document.querySelectorAll('.gradient-orb');
@@ -84,12 +84,12 @@ const orbs = document.querySelectorAll('.gradient-orb');
 document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX / window.innerWidth;
     const mouseY = e.clientY / window.innerHeight;
-    
+
     orbs.forEach((orb, index) => {
-        const speed = (index + 1) * 0.05;
-        const x = mouseX * 100 * speed;
-        const y = mouseY * 100 * speed;
-        
+        const speed = (index + 1) * 0.02; // Reduced from 0.05
+        const x = mouseX * 50 * speed; // Reduced from 100
+        const y = mouseY * 50 * speed; // Reduced from 100
+
         orb.style.transform = `translate(${x}px, ${y}px)`;
     });
 });
@@ -103,18 +103,18 @@ let statsAnimated = false;
 
 const animateStats = () => {
     if (statsAnimated) return;
-    
+
     stats.forEach(stat => {
         const text = stat.textContent;
-        
+
         // Skip if not a number
         if (text === '∞') return;
-        
+
         const target = parseInt(text);
         const duration = 2000;
         const step = target / (duration / 16);
         let current = 0;
-        
+
         const updateCounter = () => {
             current += step;
             if (current < target) {
@@ -124,10 +124,10 @@ const animateStats = () => {
                 stat.textContent = text;
             }
         };
-        
+
         updateCounter();
     });
-    
+
     statsAnimated = true;
 };
 
@@ -146,17 +146,17 @@ if (heroStats) {
 }
 
 // ===================================
-// PARALLAX EFFECT FOR HERO
+// PARALLAX EFFECT FOR HERO (REDUCED)
 // ===================================
 
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
     const heroVisual = document.querySelector('.hero-visual');
-    
+
     if (heroContent && heroVisual && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-        heroVisual.style.transform = `translateY(${scrolled * 0.2}px)`;
+        heroContent.style.transform = `translateY(${scrolled * 0.15}px)`; // Reduced from 0.3
+        heroVisual.style.transform = `translateY(${scrolled * 0.1}px)`; // Reduced from 0.2
     }
 });
 
@@ -175,26 +175,26 @@ if (qrCode) {
 }
 
 // ===================================
-// FEATURE CARD TILT EFFECT
+// FEATURE CARD TILT EFFECT (REDUCED)
 // ===================================
 
-const featureCards = document.querySelectorAll('.feature-card, .app-card');
+const featureCards = document.querySelectorAll('.feature-card');
 
 featureCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
-        
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+
+        const rotateX = (y - centerY) / 40; // Reduced from 20
+        const rotateY = (centerX - x) / 40; // Reduced from 20
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = '';
     });
@@ -275,7 +275,7 @@ if ('IntersectionObserver' in window) {
             }
         });
     });
-    
+
     document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
     });
