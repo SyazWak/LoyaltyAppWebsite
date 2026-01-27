@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Loyalty System - Secure Reward Management Platform</title>
+    <meta name="description" content="A comprehensive QR-based loyalty reward management system with staff-controlled verification, role-based tiers, and secure point tracking.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">QR Loyalty</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#apps">Applications</a></li>
+                <li><a href="#contact" class="btn-primary">Get Started</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Next-Gen Loyalty Management</span>
+                </div>
+                <h1 class="hero-title">
+                    Secure QR-Based<br>
+                    <span class="gradient-text">Loyalty Rewards</span><br>
+                    Made Simple
+                </h1>
+                <p class="hero-description">
+                    A complete end-to-end loyalty system with staff-controlled verification, 
+                    role-based tiers, and blockchain-level security. Eliminate fraud and 
+                    manual tracking with our innovative QR technology.
+                </p>
+                <div class="hero-cta">
+                    <a href="#features" class="btn-primary btn-large">
+                        Explore Features
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#architecture" class="btn-secondary btn-large">
+                        View Architecture
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Fraud Prevention</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Mobile Apps</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Scalability</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="qr-animation">
+                                <div class="qr-code"></div>
+                                <div class="scan-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Core Features</span>
+                <h2 class="section-title">Everything You Need for<br><span class="gradient-text">Modern Loyalty Management</span></h2>
+                <p class="section-description">Built with security, scalability, and user experience in mind</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Staff-Controlled Verification</h3>
+                    <p>All point awards and redemptions require staff approval, eliminating self-service fraud</p>
+                    <ul class="feature-list">
+                        <li>Time-limited QR codes</li>
+                        <li>One-time token usage</li>
+                        <li>Staff accountability tracking</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎖️</div>
+                    <h3>Dynamic Role System</h3>
+                    <p>Automatic tier progression based on customer loyalty and point accumulation</p>
+                    <ul class="feature-list">
+                        <li>Bronze → Silver → Gold tiers</li>
+                        <li>Auto-upgrade/downgrade</li>
+                        <li>Role-based rewards</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Dual Mobile Apps</h3>
+                    <p>Separate Flutter applications for customers and staff with optimized workflows</p>
+                    <ul class="feature-list">
+                        <li>Customer reward tracking</li>
+                        <li>Staff verification tools</li>
+                        <li>Real-time synchronization</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Complete Audit Trail</h3>
+                    <p>Every transaction is logged with timestamps, staff IDs, and full traceability</p>
+                    <ul class="feature-list">
+                        <li>Transaction history</li>
+                        <li>Fraud detection</li>
+                        <li>Analytics dashboard</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-Time Processing</h3>
+                    <p>Instant point updates and reward redemptions powered by Supabase</p>
+                    <ul class="feature-list">
+                        <li>Sub-second response</li>
+                        <li>Live notifications</li>
+                        <li>Offline support</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Enterprise Security</h3>
+                    <p>Row-level security, encrypted tokens, and security-definer functions</p>
+                    <ul class="feature-list">
+                        <li>RLS policies</li>
+                        <li>Encrypted QR tokens</li>
+                        <li>Database-level validation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="architecture" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">System Design</span>
+                <h2 class="section-title">Robust <span class="gradient-text">Architecture</span></h2>
+                <p class="section-description">Client-server architecture with centralized business logic</p>
+            </div>
+
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h3 class="layer-title">Frontend Layer</h3>
+                    <div class="layer-components">
+                        <div class="component">
+                            <div class="component-icon">📱</div>
+                            <div class="component-name">Customer App</div>
+                            <div class="component-tech">Flutter</div>
+                        </div>
+                        <div class="component">
+                            <div class="component-icon">💼</div>
+                            <div class="component-name">Staff App</div>
+                            <div class="component-tech">Flutter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector"></div>
+
+                <div class="arch-layer">
+                    <h3 class="layer-title">Backend Layer</h3>
+                    <div class="layer-components">
+                        <div class="component">
+                            <div class="component-icon">🔑</div>
+                            <div class="component-name">Authentication</div>
+                            <div class="component-tech">Supabase Auth</div>
+                        </div>
+                        <div class="component">
+                            <div class="component-icon">🗄️</div>
+                            <div class="component-name">Database</div>
+                            <div class="component-tech">PostgreSQL</div>
+                        </div>
+                        <div class="component">
+                            <div class="component-icon">⚙️</div>
+                            <div class="component-name">Business Logic</div>
+                            <div class="component-tech">RPC Functions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector"></div>
+
+                <div class="arch-layer">
+                    <h3 class="layer-title">Security Layer</h3>
+                    <div class="layer-components">
+                        <div class="component">
+                            <div class="component-icon">🛡️</div>
+                            <div class="component-name">Row Level Security</div>
+                            <div class="component-tech">RLS Policies</div>
+                        </div>
+                        <div class="component">
+                            <div class="component-icon">🔒</div>
+                            <div class="component-name">Token Validation</div>
+                            <div class="component-tech">Security Definer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security" id="security">
+        <div class="container">
+            <div class="security-content">
+                <div class="security-text">
+                    <span class="section-badge">Security First</span>
+                    <h2 class="section-title">Bank-Level <span class="gradient-text">Security</span></h2>
+                    <p class="section-description">
+                        Every aspect of the system is designed with security as the top priority. 
+                        From QR token generation to point redemption, multiple layers of protection 
+                        ensure data integrity and prevent fraud.
+                    </p>
+                    
+                    <div class="security-features">
+                        <div class="security-item">
+                            <div class="security-item-icon">✓</div>
+                            <div class="security-item-content">
+                                <h4>Time-Limited QR Codes</h4>
+                                <p>Tokens expire automatically to prevent replay attacks</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-item-icon">✓</div>
+                            <div class="security-item-content">
+                                <h4>One-Time Usage</h4>
+                                <p>Each QR code can only be scanned once and is locked during processing</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-item-icon">✓</div>
+                            <div class="security-item-content">
+                                <h4>Database-Level Validation</h4>
+                                <p>All business logic runs server-side with security-definer functions</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-item-icon">✓</div>
+                            <div class="security-item-content">
+                                <h4>Role-Based Access Control</h4>
+                                <p>Users can only access their own data through RLS policies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="security-visual">
+                    <div class="security-shield">
+                        <div class="shield-layer layer-1"></div>
+                        <div class="shield-layer layer-2"></div>
+                        <div class="shield-layer layer-3"></div>
+                        <div class="shield-icon">🛡️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="apps" id="apps">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Mobile Applications</span>
+                <h2 class="section-title">Two Apps, <span class="gradient-text">One System</span></h2>
+                <p class="section-description">Optimized experiences for customers and staff</p>
+            </div>
+
+            <div class="apps-showcase">
+                <div class="app-card customer-app">
+                    <div class="app-header">
+                        <div class="app-icon">👤</div>
+                        <div class="app-info">
+                            <h3>Customer App</h3>
+                            <p>For loyalty members</p>
+                        </div>
+                    </div>
+                    <div class="app-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>
+                                <span class="feature-icon">📊</span>
+                                <span>View points balance and loyalty tier</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📱</span>
+                                <span>Generate QR codes to earn points</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🎁</span>
+                                <span>Browse and redeem rewards</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📜</span>
+                                <span>View transaction history</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🔔</span>
+                                <span>Receive real-time notifications</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="app-flow">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Generate QR</div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Staff Scans</div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Earn Points</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-card staff-app">
+                    <div class="app-header">
+                        <div class="app-icon">💼</div>
+                        <div class="app-info">
+                            <h3>Staff App</h3>
+                            <p>For business operations</p>
+                        </div>
+                    </div>
+                    <div class="app-features">
+                        <h4>Three Main Sections:</h4>
+                        <ul>
+                            <li>
+                                <span class="feature-icon">⭐</span>
+                                <span><strong>Award Points:</strong> Scan customer QR to award points securely</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">✅</span>
+                                <span><strong>Redeem Rewards:</strong> Confirm customer reward redemptions</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🎯</span>
+                                <span><strong>Manage Rewards:</strong> Create, update, and delete rewards</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📈</span>
+                                <span>View analytics and reports</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🔍</span>
+                                <span>Audit transaction history</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="app-flow">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Scan QR</div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Verify</div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Approve</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose This System</span>
+                <h2 class="section-title">Built for <span class="gradient-text">Real-World Success</span></h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <h3>Eliminates Manual Tracking</h3>
+                    <p>No more paper cards or spreadsheets. Everything is digital, automated, and real-time.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <h3>Prevents Reward Fraud</h3>
+                    <p>Staff verification and one-time QR codes make fraud virtually impossible.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <h3>Scalable Architecture</h3>
+                    <p>Supports multiple outlets, unlimited customers, and growing transaction volumes.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">04</div>
+                    <h3>Staff Accountability</h3>
+                    <p>Every action is tied to a staff member, ensuring transparency and responsibility.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">05</div>
+                    <h3>Real-Time Role Progression</h3>
+                    <p>Customers see their tier upgrades instantly, boosting engagement and loyalty.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">06</div>
+                    <h3>Secure & Auditable</h3>
+                    <p>Complete transaction history with timestamps for compliance and analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Technology Stack</span>
+                <h2 class="section-title">Built with <span class="gradient-text">Modern Tools</span></h2>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">📱</div>
+                    <h4>Flutter</h4>
+                    <p>Cross-platform mobile development</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🗄️</div>
+                    <h4>PostgreSQL</h4>
+                    <p>Robust relational database</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">⚡</div>
+                    <h4>Supabase</h4>
+                    <p>Backend-as-a-Service platform</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔐</div>
+                    <h4>RLS Policies</h4>
+                    <p>Row-level security enforcement</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">⚙️</div>
+                    <h4>RPC Functions</h4>
+                    <p>Server-side business logic</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📊</div>
+                    <h4>Real-time DB</h4>
+                    <p>Live data synchronization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Loyalty Program?</h2>
+                <p>Get in touch to learn more about implementing this system for your business</p>
+                <div class="cta-buttons">
+                    <a href="mailto:your.email@example.com" class="btn-primary btn-large">
+                        Contact Me
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#" class="btn-secondary btn-large">View Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🎯</span>
+                        <span class="logo-text">QR Loyalty</span>
+                    </div>
+                    <p>Secure, scalable, and real-world-ready loyalty management</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Project</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#architecture">Architecture</a></li>
+                            <li><a href="#security">Security</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Case Study</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 QR Loyalty System. Built as a portfolio project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
