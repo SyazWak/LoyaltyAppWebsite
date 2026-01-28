@@ -57,9 +57,10 @@
                     Made Simple
                 </h1>
                 <p class="hero-description">
-                    A complete end-to-end loyalty system with staff-controlled verification,
-                    role-based tiers, and secure database design. Reduce fraud risk and
-                    streamline tracking with QR technology.
+                    A comprehensive loyalty system featuring <strong>dual-party verification</strong>—customers
+                    generate QR codes, but points are only awarded or redeemed after staff confirmation.
+                    Built with PostgreSQL, Row Level Security, and security definer functions for
+                    enterprise-grade data integrity.
                 </p>
                 <div class="hero-cta">
                     <a href="#features" class="btn-primary btn-large">
@@ -113,12 +114,13 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🔐</div>
-                    <h3>Staff-Controlled Verification</h3>
-                    <p>All point awards and redemptions require staff approval, reducing unauthorized access</p>
+                    <h3>Dual-Party Verification</h3>
+                    <p>Customers generate QR codes, but points are only processed after staff scans and
+                        confirms—preventing self-service fraud</p>
                     <ul class="feature-list">
-                        <li>Time-limited QR codes</li>
-                        <li>One-time token usage</li>
-                        <li>Staff accountability tracking</li>
+                        <li>Time-limited tokens (5min earn, 15min redeem)</li>
+                        <li>One-time use with row locking</li>
+                        <li>Daily earning limits (500 pts/day)</li>
                     </ul>
                 </div>
 
@@ -147,33 +149,34 @@
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
                     <h3>Complete Audit Trail</h3>
-                    <p>Every transaction is logged with timestamps, staff IDs, and full traceability</p>
+                    <p>Comprehensive transaction logging with staff attribution, timestamps, and immutable records for
+                        compliance</p>
                     <ul class="feature-list">
-                        <li>Transaction history</li>
-                        <li>Fraud detection</li>
-                        <li>Analytics dashboard</li>
+                        <li>Every action traced to staff ID</li>
+                        <li>Earn/redeem type tracking</li>
+                        <li>Historical data preservation</li>
                     </ul>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Real-Time Processing</h3>
-                    <p>Instant point updates and reward redemptions powered by Supabase</p>
+                    <h3>Database-Level Logic</h3>
+                    <p>All business rules enforced via PostgreSQL RPC functions with security definer privileges</p>
                     <ul class="feature-list">
-                        <li>Sub-second response</li>
-                        <li>Live notifications</li>
-                        <li>Offline support</li>
+                        <li>Client apps cannot bypass validation</li>
+                        <li>Atomic transactions with locking</li>
+                        <li>Automated role upgrades/downgrades</li>
                     </ul>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
-                    <h3>Secure Implementation</h3>
-                    <p>Row-level security policies, token validation, and database-level access control</p>
+                    <h3>Advanced Security</h3>
+                    <p>Row-level security, security definer functions, and comprehensive token management</p>
                     <ul class="feature-list">
-                        <li>RLS policies</li>
-                        <li>Encrypted QR tokens</li>
-                        <li>Database-level validation</li>
+                        <li>Policy-based access control (RLS)</li>
+                        <li>Token expiration & cleanup</li>
+                        <li>Concurrent access handling</li>
                     </ul>
                 </div>
             </div>
@@ -185,8 +188,9 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">System Design</span>
-                <h2 class="section-title">Robust <span class="gradient-text">Architecture</span></h2>
-                <p class="section-description">Client-server architecture with centralized business logic</p>
+                <h2 class="section-title">Database-First <span class="gradient-text">Architecture</span></h2>
+                <p class="section-description">All critical business logic centralized in PostgreSQL with RPC functions
+                    and Row Level Security</p>
             </div>
 
             <div class="architecture-diagram">
@@ -223,8 +227,8 @@
                         </div>
                         <div class="component">
                             <div class="component-icon">⚙️</div>
-                            <div class="component-name">Business Logic</div>
-                            <div class="component-tech">RPC Functions</div>
+                            <div class="component-name">RPC Functions</div>
+                            <div class="component-tech">Security Definer</div>
                         </div>
                     </div>
                 </div>
