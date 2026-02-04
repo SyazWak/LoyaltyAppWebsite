@@ -1,5 +1,5 @@
-# QR-Based Loyalty Reward Management System - Showcase Website
 
+<<<<<<< HEAD
 A stunning, modern website to showcase your QR-based loyalty reward management system project.
 
 ## 🎯 Features
@@ -211,3 +211,5 @@ This is a portfolio project. Feel free to use and modify for your own projects.
 ---
 
 **Built with ❤️ to showcase an innovative loyalty management system**
+=======
+>>>>>>> 2282a175226a0142352f9f08cdf546bfe45a228a
