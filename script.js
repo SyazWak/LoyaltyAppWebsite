@@ -65,3 +65,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 console.log('%c🎯 SW Loyalty Ecosystem | Portfolio Showcase', 'font-size: 24px; font-weight: bold; color: #6366f1;');
 console.log('%cProject Architecture & Implementation by Waiz', 'font-size: 14px; color: #a855f7;');
 console.log('%cInterested in the tech stack? Explore the repository for details.', 'font-size: 12px; color: #94a3b8;');
+
+// ===================================
+// LIGHTBOX / IMAGE MODAL
+// ===================================
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("img01");
+const captionText = document.getElementById("caption");
+const closeBtn = document.querySelector(".close-modal");
+
+// Select only the main product images for expansion
+const expandableImages = document.querySelectorAll('img[data-expandable]');
+
+expandableImages.forEach(img => {
+    img.onclick = function () {
+        modal.classList.add('show');
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    }
+});
+
+// Close modal when clicking close button, the background, or ESC key
+function closeModal() {
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+closeBtn.onclick = closeModal;
+
+modal.onclick = function (e) {
+    if (e.target === modal) {
+        closeModal();
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+        closeModal();
+    }
+});
