@@ -10,7 +10,7 @@ This website includes:
 - **Features Showcase** highlighting all 6 core features
 - **System Architecture** diagram with interactive components
 - **Security Features** with animated shield visualization
-- **Dual App Showcase** for Customer and Staff applications
+- **Triple App Showcase** for Customer, Staff, and Admin applications
 - **Benefits Grid** explaining the real-world advantages
 - **Tech Stack** display showing all technologies used
 - **Responsive Design** that works on all devices
