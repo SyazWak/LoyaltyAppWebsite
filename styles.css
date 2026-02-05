@@ -330,6 +330,39 @@ ul {
     align-items: center;
 }
 
+.product-row.vertical {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product-row.vertical .product-info {
+    text-align: center;
+}
+
+.product-row.vertical .info-list {
+    text-align: left;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-row.vertical .feature-pills {
+    justify-content: center;
+}
+
+.product-row.vertical .product-visual {
+    width: 100%;
+}
+
+.product-row.vertical .test-credentials {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
 .product-row.reverse {
     direction: rtl;
 }
