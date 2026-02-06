@@ -2,7 +2,7 @@
 
 Welcome to the showcase of the **SW Loyalty Ecosystem**—a comprehensive, industrial-grade loyalty management suite designed to modernize the way retail businesses engage with their customers.
 
-**🌐 Explore the Live Project:** [https://syazwak.github.io/LoyaltyAppWebsite/](https://syazwak.github.io/LoyaltyAppWebsite/)
+**🌐 Explore the Live Project:** [https://syazwak.github.io/LoyaltySystemWebsite/](https://syazwak.github.io/LoyaltySystemWebsite/)
 
 ---
 
@@ -21,7 +21,7 @@ The project consists of three interconnected applications working from a single 
 
 ## 🎯 How to Explore
 
-To see the project in action, please visit the [Live Showcase](https://syazwak.github.io/LoyaltyAppWebsite/). 
+To see the project in action, please visit the [Live Showcase](https://syazwak.github.io/LoyaltySystemWebsite/). 
 
 On the website, I have provided **Test Credentials** for all three platforms (Customer, Staff, and Admin). You can use these to:
 *   Explore the live interfaces.
