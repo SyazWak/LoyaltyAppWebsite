@@ -243,8 +243,7 @@ ul {
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1000px;
     text-align: center;
 }
 
@@ -505,6 +504,30 @@ ul {
     border-color: transparent;
     transform: translateY(-5px);
     box-shadow: var(--shadow-glow);
+}
+
+.apk-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: var(--transition);
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.apk-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.apk-link svg {
+    color: var(--primary);
 }
 
 .test-credentials {
